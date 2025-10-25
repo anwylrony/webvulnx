@@ -57,7 +57,7 @@ This tool is for **EDUCATIONAL and AUTHORIZED TESTING PURPOSES ONLY**. Running t
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/webvulnx-pro.git
+    git clone https://github.com/anwyllrony/webvulnx-pro.git
     cd webvulnx-pro
     ```
 
