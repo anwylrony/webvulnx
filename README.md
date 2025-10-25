@@ -57,8 +57,8 @@ This tool is for **EDUCATIONAL and AUTHORIZED TESTING PURPOSES ONLY**. Running t
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/anwyllrony/webvulnx-pro.git
-    cd webvulnx-pro
+    git clone https://github.com/anwylrony/webvulnx.git
+    cd webvulnx
     ```
 
 2.  **Install Python dependencies:**
