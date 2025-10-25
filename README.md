@@ -117,6 +117,89 @@ python webvulnx_pro.py http://testphp.vulnweb.com -o vulnerability_report.json
 
 ---
 
+### How to Use the Dependency File
+
+With the `requirements.txt` file in your project directory, you can install all the necessary packages with a single command.
+
+1.  **Navigate to your project directory:**
+    ```bash
+    cd path/to/webvulnx-pro
+    ```
+
+2.  **Install the dependencies using pip:**
+    It's highly recommended to do this inside a virtual environment.
+    ```bash
+    # Create and activate a virtual environment (optional but recommended)
+    python -m venv venv
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+    # Install all packages from the file
+    pip install -r requirements.txt
+    ```
+
+3.  **Install Playwright Browsers (Crucial Final Step):**
+    After installing the `playwright` Python package, you must install the browser binaries it controls. This is a separate command.
+    ```bash
+    playwright install
+    ```
+
+This command downloads Chromium, Firefox, and WebKit browser engines to your system, allowing Playwright to function.
+
+---
+
+### Alternative (Modern) Approach: `pyproject.toml`
+
+For more modern Python projects, you can use a `pyproject.toml` file. This is becoming the new standard for defining project metadata and dependencies.
+
+Create a file named `pyproject.toml` with the following content:
+
+```toml
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "webvulnx-pro"
+version = "1.0.0"
+description = "Advanced Automated Vulnerability Discovery for Authorized Testing"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+keywords = ["pentesting", "security", "vulnerability", "scanner", "bug-hunting"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests>=2.28.0",
+    "beautifulsoup4>=4.11.0",
+    "playwright>=1.40.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/webvulnx-pro"
+"Bug Tracker" = "https://github.com/your-username/webvulnx-pro/issues"
+```
+
+**How to use `pyproject.toml`:**
+
+You would install the project in "editable" mode, which also installs its dependencies:
+```bash
+pip install -e .
+```
+And you would still need to run `playwright install` separately.
+
+---
+
+**Recommendation:**
+
+For this project, **`requirements.txt` is perfectly sufficient and simpler for most users.** It's universally understood and gets the job done without extra complexity. Stick with `requirements.txt` unless you plan to distribute this as a formal package on PyPI.
+
+
 ## ⚙️ How It Works
 
 1.  **Authentication (Optional):** If credentials are provided, the tool first navigates to the login URL, parses the form, and submits the credentials to establish a session.
@@ -165,3 +248,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## ⚠️ Acknowledgement
 
 Remember, with great power comes great responsibility. Use this tool wisely and ethically. Happy hunting (on authorized targets only)!
+
+
+
+
+
