@@ -1,0 +1,10 @@
+# WebVulnX Pro - Core Dependencies
+
+# For making HTTP requests
+requests>=2.28.0
+
+# For parsing HTML and XML
+beautifulsoup4>=4.11.0
+
+# For headless browser automation (crawling modern web apps)
+playwright>=1.40.0
