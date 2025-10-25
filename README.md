@@ -1,4 +1,4 @@
-# webvulnx
+# WebVulnX
 "WebVulnX" is a conceptual Python-based tool designed to emulate the thought process of a seasoned bug hunter. It's not a magic bullet, but a powerful assistant that automates the tedious parts of reconnaissance and initial vulnerability scanning.
 Core Philosophy:
 
@@ -8,7 +8,6 @@ Adaptive WAF Bypass: It doesn't give up when blocked. It attempts to bypass Web 
 Clear Reporting: It provides a concise, color-coded report of its findings.
 
 
-# WebVulnX
 
 <p align="center">
   <strong>Advanced Automated Vulnerability Discovery for Authorized Testing</strong>
